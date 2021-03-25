@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/godot_table/Table.gd" type="Script" id=1]
+[ext_resource path="res://DemoCShap.cs" type="Script" id=2]
+
+[node name="Demo" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Table" type="PanelContainer" parent="."]
+margin_right = 165.0
+margin_bottom = 94.0
+script = ExtResource( 1 )
+column_headers = [ "qw", "ad" ]
+rows = [ [ "12", "23" ], [ "32", "21" ] ]
+
+[node name="Button" type="Button" parent="."]
+margin_left = 15.119
+margin_top = 118.433
+margin_right = 108.119
+margin_bottom = 138.433
+text = "change table"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 193.406
+margin_top = 29.4314
+margin_right = 233.406
+margin_bottom = 43.4314
+text = "click null"
+[connection signal="CLICK_ROW" from="Table" to="." method="_on_Table_CLICK_ROW"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

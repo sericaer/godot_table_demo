@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/godot_table/Table.gd" type="Script" id=1]
+[ext_resource path="res://Demo.gd" type="Script" id=2]
+
+[node name="Demo" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Table" type="PanelContainer" parent="."]
+margin_left = 7.0
+margin_top = 29.0
+margin_right = 175.0
+margin_bottom = 147.0
+script = ExtResource( 1 )
+column_headers = [ "ab", "cd" ]
+rows = [ [ "12", "23" ], [ "32", "21" ] ]
+
+[node name="Button" type="Button" parent="."]
+margin_left = 2.46985
+margin_top = 152.9
+margin_right = 90.4698
+margin_bottom = 172.9
+text = "change data"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 221.428
+margin_top = 41.3191
+margin_right = 261.428
+margin_bottom = 55.3191
+text = "click null"
+[connection signal="CLICK_ROW" from="Table" to="." method="_on_Table_CLICK_ROW"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
