@@ -22,5 +22,5 @@ func _on_Table_CLICK_ROW(value):
 
 
 func _on_Button_pressed():
-	$Table.set_rows([['100', '200'], ['300', '400']])
+	$Table.set_rows([['Tom', '100'], ['Dan', '40']])
 

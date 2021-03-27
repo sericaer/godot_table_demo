@@ -11,13 +11,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Table" type="PanelContainer" parent="."]
-margin_right = 165.0
-margin_bottom = 94.0
-script = ExtResource( 1 )
-column_headers = [ "qw", "ad" ]
-rows = [ [ "12", "23" ], [ "32", "21" ] ]
-
 [node name="Button" type="Button" parent="."]
 margin_left = 15.119
 margin_top = 118.433
@@ -31,5 +24,16 @@ margin_top = 29.4314
 margin_right = 233.406
 margin_bottom = 43.4314
 text = "click null"
-[connection signal="CLICK_ROW" from="Table" to="." method="_on_Table_CLICK_ROW"]
+
+[node name="Table" type="PanelContainer" parent="."]
+margin_right = 165.0
+margin_bottom = 111.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+column_headers = [ "name", "score" ]
+min_row_count = 3
+rows = [ [ "Bob", "60" ], [ "Lisa", "80" ], [ "--", "--" ] ]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="CLICK_ROW" from="Table" to="." method="_on_Table_CLICK_ROW"]

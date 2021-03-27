@@ -12,13 +12,15 @@ __meta__ = {
 }
 
 [node name="Table" type="PanelContainer" parent="."]
-margin_left = 7.0
-margin_top = 29.0
-margin_right = 175.0
-margin_bottom = 147.0
+margin_right = 165.0
+margin_bottom = 127.0
 script = ExtResource( 1 )
-column_headers = [ "ab", "cd" ]
-rows = [ [ "12", "23" ], [ "32", "21" ] ]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+column_headers = [ "name", "score" ]
+min_row_count = 3
+rows = [ [ "Bob", "60" ], [ "Lisa", "80" ], [ "--", "--" ] ]
 
 [node name="Button" type="Button" parent="."]
 margin_left = 2.46985
