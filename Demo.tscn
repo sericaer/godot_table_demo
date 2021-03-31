@@ -20,7 +20,6 @@ __meta__ = {
 }
 column_headers = [ "name", "score" ]
 min_row_count = 3
-rows = [ [ "Bob", "60" ], [ "Lisa", "80" ], [ "--", "--" ] ]
 
 [node name="Button" type="Button" parent="."]
 margin_left = 2.46985

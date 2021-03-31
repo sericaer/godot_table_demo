@@ -1,5 +1,6 @@
 extends Control
 
+const RowData = preload("res://addons/godot_table/RowData.gd")
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -22,5 +23,8 @@ func _on_Table_CLICK_ROW(value):
 
 
 func _on_Button_pressed():
-	$Table.set_rows([['Tom', '100'], ['Dan', '40']])
-
+	#$Table.set_rows([['Tom', '100'], ['Dan', '40']])
+	$Table.set_rows_([
+		RowData.new().set_data(['Tom', '100']).set_disable(true),
+		RowData.new().set_data(['Dan', '40'])
+	])
