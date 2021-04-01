@@ -13,5 +13,5 @@ __meta__ = {
 margin_right = 26.0
 margin_bottom = 26.0
 script = ExtResource( 1 )
-column_headers = [ "", "", "" ]
-row_strings = [ [ "--", "--", "--" ], [ "--", "--", "--" ], [ "--", "--", "--" ] ]
+column_headers = [ "", "" ]
+row_strings = [ [ "--", "--" ], [ "--", "--" ] ]
